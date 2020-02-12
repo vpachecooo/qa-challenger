@@ -2,7 +2,7 @@
 
 const assert = require("chai").assert;
 
-describe('checks "https://internet.frontier.com/" homepage opens successfully', function() {
+describe('checks "https://getlabor.com.br/" homepage opens successfully', function() {
   it("should have the right title", function() {
     //Open the homepage for Frontier Communications
     browser.url("");
@@ -11,7 +11,7 @@ describe('checks "https://internet.frontier.com/" homepage opens successfully', 
     var title = browser.getTitle();
 
     //Verifies that the returned title matches as expected
-    assert.equal(title, "Frontier Communications Internet | 855-751-3467");
+    assert.equal(title, "Labor - Controle de Horas");
 
     //Prints the title to the console
     console.log("Title of homepage is: " + title);

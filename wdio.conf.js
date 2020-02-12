@@ -13,7 +13,7 @@ exports.config = {
   deprecationWarnings: true,
   bail: 0,
   screenshotPath: "./errorShots/",
-  baseUrl: "https://internet.frontier.com/",
+  baseUrl: "https://getlabor.com.br/",
   waitforTimeout: 9999999999,
   connectionRetryTimeout: 90000,
   connectionRetryCount: 3,
