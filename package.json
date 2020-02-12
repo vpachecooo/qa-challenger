@@ -1,7 +1,7 @@
 {
   "name": "qa-challenger",
   "version": "1.0.0",
-  "description": "QA Test for Frontier.com homepage (Novatics Interview Project)",
+  "description": "QA Test for getlabor.com.br homepage (Novatics Interview Project)",
   "main": "index.js",
   "scripts": {
     "test": "wdio"
