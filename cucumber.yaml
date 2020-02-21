@@ -1,0 +1,19 @@
+---
+#default parameters
+default: -p dev -p chrome -p html -p pretty
+
+#dev environment
+dev: ENV_TYPE=dev
+
+#browser
+firefox: BROWSER=firefox
+chrome: BROWSER=chrome
+headless: BROWSER=headless
+
+#format report
+html: --format html --out=log/report.html
+json: --format json --out=log/report.json
+
+#prompt output
+pretty: --format pretty
+progress: --format progress
