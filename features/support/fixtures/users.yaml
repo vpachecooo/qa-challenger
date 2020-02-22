@@ -3,3 +3,9 @@ user1:
   segment: "Desenvolvimento de Software"
   email: "email@test.com"
   password: "password1203"
+
+user2:
+  name: "Victor Pacheco"
+  segment: "Desenvolvimento de Software"
+  email: "email.1234@test.com"
+  password: "password1203"

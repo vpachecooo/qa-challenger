@@ -15,8 +15,14 @@ When("try to register user with {string}") do |data|
     @data = file[data]
     @signup_page.fill_form(@data)
     @signup_page.click
+    sleep 7
 end
 
 Then("presents validation {string}") do |message|
     expect(@signup_page.ar_message).to eql message
+end
+
+Then("redirects to {string}") do |url|
+    expect(page.current_url).to eql url
+    # expect(page).to have_current_path()
 end

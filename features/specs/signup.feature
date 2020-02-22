@@ -15,7 +15,7 @@ Feature: Access Page Signup
 
     @existing_email
     Scenario Outline: Signup of existent email
-        The user want to signup with an existing user email
+        Want to signup with an existing user email
 
         When try to register user with <data>
         Then presents validation <message>
@@ -23,3 +23,14 @@ Feature: Access Page Signup
         Examples:
             | data    | message               |
             | "user1" | "Already registered!" |
+
+    @new_user
+    Scenario Outline: Register successfully
+        Want to register new user
+
+        When try to register user with <data>
+        Then redirects to <url>
+
+        Examples:
+            | data    | url                                          |
+            | "user2" | "https://app.getlabor.com.br/app/main/tasks" |
