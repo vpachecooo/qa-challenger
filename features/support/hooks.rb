@@ -4,6 +4,7 @@ Before do
 
     @homepage_page = HomepagePage.new
     @planos_page = PlanosPage.new
+    @signup_page = SignupPage.new
 end
   
 # After do |scenario|
