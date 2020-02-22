@@ -3,6 +3,7 @@ Before do
     page.current_window.maximize
 
     @homepage_page = HomepagePage.new
+    @planos_page = PlanosPage.new
 end
   
 # After do |scenario|

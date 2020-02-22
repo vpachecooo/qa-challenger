@@ -2,7 +2,7 @@
 
 @homepage
 Feature: Access Homepage
-    checks if homepage opens successfully
+    Checks if homepage opens successfully
 
     Background: Access
         Given I access the homepage
