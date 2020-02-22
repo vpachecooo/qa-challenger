@@ -10,12 +10,20 @@ Then("presents validation message {string} in the fields") do |message|
     expect(@signup_page.message).to have_text message
 end
 
+When("try to register user with the {string}") do |data|
+    file = YAML.load_file(File.join(Dir.pwd, "features/support/fixtures/users.yaml"))
+    @data = file[data]
+    @signup_page.fill_form_er(@data)
+    @signup_page.click
+    sleep 3
+end
+
 When("try to register user with {string}") do |data|
     file = YAML.load_file(File.join(Dir.pwd, "features/support/fixtures/users.yaml"))
     @data = file[data]
     @signup_page.fill_form(@data)
     @signup_page.click
-    sleep 7
+    sleep 3
 end
 
 Then("presents validation {string}") do |message|
@@ -24,5 +32,5 @@ end
 
 Then("redirects to {string}") do |url|
     expect(page.current_url).to eql url
-    # expect(page).to have_current_path()
+    # @signup_page.logout
 end

@@ -17,7 +17,7 @@ Feature: Access Page Signup
     Scenario Outline: Signup of existent email
         Want to signup with an existing user email
 
-        When try to register user with <data>
+        When try to register user with the <data>
         Then presents validation <message>
 
         Examples:

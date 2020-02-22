@@ -5,9 +5,10 @@ Before do
     @homepage_page = HomepagePage.new
     @planos_page = PlanosPage.new
     @signup_page = SignupPage.new
+    @signin_page = SigninPage.new
 end
   
-# After do |scenario|
-#     screenshot = page.save_screenshot("log/screenshots/#{scenario.__id__}.png")
-#     embed(screenshot, "image/png", "Screenshot")
-# end  
+After do |scenario|
+    screenshot = page.save_screenshot("log/screenshots/#{scenario.__id__}.png")
+    embed(screenshot, "image/png", "Screenshot")
+end
