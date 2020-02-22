@@ -4,7 +4,7 @@
 Feature: Access Homepage
     Checks if homepage opens successfully
 
-    Background: Access
+    Background: Access Homepage
         Given I access the homepage
 
     @homepage_title
@@ -13,7 +13,7 @@ Feature: Access Homepage
         Then should be equal <title>
 
         Examples:
-            | title |
+            | title                       |
             | "Labor - Controle de Horas" |
 
     @homepage_pricing
@@ -22,5 +22,5 @@ Feature: Access Homepage
         Then should be <pricing>
 
         Examples:
-            | pricing |
+            | pricing                                    |
             | "Teste o Labor por 30 dias gratuitamente!" |

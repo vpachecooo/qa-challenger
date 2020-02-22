@@ -9,3 +9,14 @@ end
 Then("presents validation message {string} in the fields") do |message|
     expect(@signup_page.message).to have_text message
 end
+
+When("try to register user with {string}") do |data|
+    file = YAML.load_file(File.join(Dir.pwd, "features/support/fixtures/users.yaml"))
+    @data = file[data]
+    @signup_page.fill_form(@data)
+    @signup_page.click
+end
+
+Then("presents validation {string}") do |message|
+    expect(@signup_page.ar_message).to eql message
+end
